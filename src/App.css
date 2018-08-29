@@ -9,4 +9,60 @@ nav ul {
   list-style: none;
 }
 
+header {
+  background-image: linear-gradient(rgb(104, 124, 104), white);
+  color: black;
+  text-shadow: 2px 2px 4px white;
+  font-size: 1.2em;
+  margin-top: 0em;
+  padding: 1em;
+}
 
+nav {
+  display: flex;
+  justify-content: space-around; 
+  color: black;
+  margin: 2em 0em 1em 0em;
+}
+
+nav a:hover {
+  color: lightgray;
+  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px darkgray;
+}
+
+.petList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.petBlock {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(153, 175, 153);
+  border: 2px solid darkgray;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+.petImage {
+  margin: 0em 1em 0em 1em;
+  width: 18em;
+  height: 18em;
+  border-radius: 10px;
+}
+
+.petName {
+  margin: 1em;
+  font-size: 1em;
+}
+
+.addToFavs {
+  width: 9em;
+  margin: .8em;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+}

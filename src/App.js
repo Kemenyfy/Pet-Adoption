@@ -9,7 +9,7 @@ class App extends Component {
       pets: []
     }
   }
-  
+
 
   componentDidMount() {
     this.setState({
@@ -21,24 +21,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>Pets for Adoption</header>
-        {/*  */}
+        <header>
+          <h2>Pets for Adoption</h2>
+          <h4>Because rescued is my favorite breed.</h4>
+        </header>
         <nav>
-          <ul>
-            <li>View all pets</li>
-            <li>Potential adoptees</li>
-          </ul>
+          <a>My Favorites</a>
+          <a>Pets for Adoption</a>
         </nav>
-        {/*  */}
-        {this.state.pets.map((pet, i) => {
-          return (
-            <section className="pet-list" key={i}>
-              <header>{pet.name.$t}</header>
-              <img src={pet.media.photos.photo[3].$t} />
-              <button>Save for Later! arf!</button>
-            </section>
-          );
-        })}
+        <section className="petList">
+          {this.state.pets.map((pet, i) => {
+            return (
+              <section className="petBlock" key={i}>
+                <span className="petName">{pet.name.$t}</span>
+                <img className="petImage" src={pet.media.photos.photo[3].$t} alt="Pet Missing" />
+                <button className="addToFavs">Add to My Pets</button>
+              </section>
+            );
+          })}
+        </section>
       </div>
     );
   }
